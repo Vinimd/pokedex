@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/imagens/POKEBOLA.png">
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+    <title>POKÉMON:POKÉDEX</title>
+</head>
+
+<body>
+    <form>
+        <label for="pokemon-name">Digite o nome do pokémon:</label>
+        <input type="text" name="pokemon-name" id="pokemon-name">
+        <button data-search>Search</button>
+    </form>
+    <div class="display">
+        <button data-button='next'></button>
+        <button data-button='before'></button>
+    </div>
+    <div class="search-type">
+        <button data-serach-type='next-type'></button>
+        <button data-serach-type='before-type'></button>
+        <button data-serach-type='next'></button>
+        <button data-serach-type='before'></button>
+    </div>
+
+    <script type='module' src="./assets/js/script.js"></script>
+</body>
+
+</html>
