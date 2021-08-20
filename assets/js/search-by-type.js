@@ -1,3 +1,4 @@
+import AbleButton from './able-button.js'
 import CreateDivImg from "./div-img.js";
 import CreateDivName from "./div-name.js";
 import CreateDivType from "./div-type.js";
@@ -128,7 +129,8 @@ export default function InitSearchBytype() {
     }
 
     function ChangeType(event) {
- 
+            AbleButton(buttonsType[2],buttonsType[3]);
+
             if (numberType < 18 && event.target.dataset.serachType === 'next-type') {
                 numberType++;
             } else if (numberType > 1 && event.target.dataset.serachType === 'previous-type') {
