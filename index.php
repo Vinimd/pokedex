@@ -1,5 +1,5 @@
 <?php
 
-include_once("index.hmtl");
+include_once("index.html");
 
 ?>
