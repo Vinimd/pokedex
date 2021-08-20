@@ -1,5 +1,6 @@
 form{
     width: 30%;
+    min-width: 190px;
     margin: 0 auto;
     padding: 1rem 0 1rem 1rem;
     background-color: rgba(243, 46, 46, 0.863);

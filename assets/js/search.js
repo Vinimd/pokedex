@@ -6,6 +6,8 @@ import CreateDivHW from "./div-height-weight.js";
 export default function initSearch() {
     const buttons = document.querySelectorAll('[data-button]');
     const searchbutton = document.querySelector('[data-search]');
+    const containerTypeSearch = document.querySelector('.search-type');
+
 
     let index = 0;
     //função para deletar div com a imagem e nome dos pokemons anteriores
@@ -30,6 +32,13 @@ export default function initSearch() {
     function Request(searchItem) {
         const display = document.querySelector('.display');
         const nextButton = document.querySelector('[data-button="next"]');
+        //verificando se existe uma div com o valor de busca por tipo
+        const thereIsDivTypeSearch = document.querySelector('.type-term');
+        
+        //excluindo a div com o valor de busca tipo de pokemon buscado
+        if (thereIsDivTypeSearch) {
+            containerTypeSearch.removeChild(thereIsDivTypeSearch)
+        }
         if (searchItem) {
             //Obtendo as informações do pokemon
             const url = `https://pokeapi.co/api/v2/pokemon/${searchItem}`;
@@ -76,11 +85,11 @@ export default function initSearch() {
         //verificação de qual botão foi clicado
         if (index < 384 && event.target.dataset.button === 'next') {
             index++;
-        } else if (index > 1 && event.target.dataset.button === 'before') {
+        } else if (index > 1 && event.target.dataset.button === 'previous') {
             index--;
         } else if (index === 384 && event.target.dataset.button === 'next') {
             index = 1;
-        } else if (index === 1 && event.target.dataset.button === 'before') {
+        } else if (index === 1 && event.target.dataset.button === 'previous') {
             index = 384
         }
         Request(index)
@@ -92,8 +101,9 @@ export default function initSearch() {
 
     function SearchBar(event) {
         event.preventDefault();
+        const hello = 'tetste';
         //obtendo o valor do campo de texto
-        const searchTerm = event.target.parentElement.elements[0].value;
+        const searchTerm = event.target.parentElement.elements[0].value.toLocaleLowerCase();
         //ativando a função de request com o valor valor de input sendo o v=parametro de pesquisa para a pokedex
         Request(searchTerm);
 

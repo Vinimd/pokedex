@@ -50,7 +50,7 @@ body{
     right: 250px;
     cursor: pointer;
 }
-[data-button=before]{
+[data-button = previous]{
     
     width: 1rem;
     height: 1rem;

@@ -14,21 +14,28 @@
 </head>
 
 <body>
+    <button class="help-button" data-modal='open'>help</button>
     <form>
-        <label for="pokemon-name">Digite o nome do pokémon:</label>
+        <label for="pokemon-name">type the pokémon name:</label>
         <input type="text" name="pokemon-name" id="pokemon-name">
         <button data-search>Search</button>
     </form>
     <div class="display">
         <button data-button='next'></button>
-        <button data-button='before'></button>
+        <button data-button='previous'></button>
         <div class="search-type">
             <button data-serach-type='next-type'></button>
-            <button data-serach-type='before-type'></button>
+            <button data-serach-type='previous-type'></button>
             <button data-serach-type='next'></button>
-            <button data-serach-type='before'></button>
+            <button data-serach-type='previous'></button>
         </div>
     </div>
+    <section class="help" data-modal ="container">
+            <div class='help-img'>
+                <img src="./assets/imagens/help_img.png" data-modal ="img">
+            </div>
+            <button class="close" data-modal='close'>X</button>
+    </section>
     <script type='module' src="./assets/js/script.js"></script>
 </body>
 

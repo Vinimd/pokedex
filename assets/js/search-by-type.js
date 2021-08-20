@@ -5,10 +5,10 @@ import CreateDivHW from "./div-height-weight.js";
 
 export default function InitSearchBytype() {
     const buttonsType = document.querySelectorAll('[data-serach-type]');
-    const containerTypeSearch = document.querySelector('.search-type')
+    const containerTypeSearch = document.querySelector('.search-type');
     let numberType = 0;
     let index = 0;
-    
+
     function DeletDiv() {
         const thereIsDivNameInfo = document.querySelector('.pokemon-name-info');
         const thereIsDivImg = document.querySelector('.pokemon-image');
@@ -28,7 +28,7 @@ export default function InitSearchBytype() {
 
     }
 
-    function PokemonRequest(searchItem) {
+    function POkemonRequest(searchItem) {
         const display = document.querySelector('.display');
         const nextButton = document.querySelector('[data-button="next"]');
         if (searchItem) {
@@ -79,34 +79,30 @@ export default function InitSearchBytype() {
         const nextButton = document.querySelector('[data-button="next"]');
         const thereIsDivTypeSearch = document.querySelector('.type-term')
 
-            //Obtendo as informações dos pokemos do tipo selecionado
+            //Obtendo as informações do tipo de pokemon
             const url = `https://pokeapi.co/api/v2/type/${type}`;
             const typeUrl = fetch(url);
 
             // transformando arquivo recebido em json
             typeUrl.then(r => r.json()).then(json => {
-                //verificando a troca do tipo de pokemon
                 if(!(containerTypeSearch.id == json.name)){
                     index = 0;
                     containerTypeSearch.id = json.name;
                 }
-                //escolhendo o pokemon no tipo selecionado
-                console.log(json.pokemon.length)
+
                 //verificação de qual botão foi clicado no indece de escolho do pokemon
                 if (index < (json.pokemon.length-1) && event.target.dataset.serachType === 'next') {
                     index++;
-                } else if (index > 0 && event.target.dataset.serachType === 'before') {
+                } else if (index > 0 && event.target.dataset.serachType === 'previous') {
                     index--;
                 } else if (index === (json.pokemon.length - 1) && event.target.dataset.serachType === 'next') {
                     index = 0;
-                } else if (index === 0 && event.target.dataset.serachType === 'before') {
+                } else if (index === 0 && event.target.dataset.serachType === 'previous') {
                     index = (json.pokemon.length - 1)
                 }
-                //verificando se a uma div com typo do pokemon
                 if (thereIsDivTypeSearch) {
                     containerTypeSearch.removeChild(thereIsDivTypeSearch)
                 }
-                //criando uma div com o tipo de pokemon selecionado
                 const divTypeSearch = document.createElement('div');
                 divTypeSearch.setAttribute('class', 'type-term');
                 divTypeSearch.innerText = json.name
@@ -114,7 +110,7 @@ export default function InitSearchBytype() {
 
 
                 const pokemon = json.pokemon[index].pokemon.url
-                PokemonRequest(pokemon)
+                POkemonRequest(pokemon)
 
 
             }).catch(() => {
@@ -132,14 +128,14 @@ export default function InitSearchBytype() {
     }
 
     function ChangeType(event) {
-            //selecionando o tipo de pokemon
+ 
             if (numberType < 18 && event.target.dataset.serachType === 'next-type') {
                 numberType++;
-            } else if (numberType > 1 && event.target.dataset.serachType === 'before-type') {
+            } else if (numberType > 1 && event.target.dataset.serachType === 'previous-type') {
                 numberType--;
             } else if (numberType === 18 && event.target.dataset.serachType === 'next-type') {
                 numberType = 1;
-            } else if ((numberType === 1 || numberType === 0) && event.target.dataset.serachType === 'before-type') {
+            } else if ((numberType === 1 || numberType === 0) && event.target.dataset.serachType === 'previous-type') {
                 numberType = 18
             }
             TypeRequest(event, numberType)

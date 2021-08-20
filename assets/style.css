@@ -3,4 +3,5 @@
 @import './pokemon-height-weight.css';
 @import './span-types-styles.css';
 @import './error.css';
-@import 'search-by-type.css';
+@import './search-by-type.css';
+@import './help.css'
