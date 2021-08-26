@@ -13,7 +13,7 @@ Esse projeto tem como finalide demonstrar a capacidade de realizar requisições
 
 ##Features
 
-Inclusão de pesquisa por voz em navegadores com suporte a api SpeechRecognition,esse informação pode ser encontrada no link a seguir: https://caniuse.com/mdn-api_speechrecognitionevent.
+Inclusão de pesquisa por voz em navegadores com suporte a API SpeechRecognition, essa informação pode ser encontrada no link a seguir: https://caniuse.com/mdn-api_speechrecognitionevent.
 
 ##DEMONSTRAÇÃO PESQUISA POR TIPO:
 
