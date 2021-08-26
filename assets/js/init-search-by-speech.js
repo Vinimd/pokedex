@@ -40,7 +40,7 @@ export default function initSearchBySpeech() {
         recognition.onerror = e => console.log('Erro:' + e);
         recognition.onresult = e => {
             speechSearch = e.results[0][0].transcript
-            if (speechSearch !== ' ')ChangeType(speechSearch)  
+            ChangeType(speechSearch)  
         }
 
         console.log(recognition)
