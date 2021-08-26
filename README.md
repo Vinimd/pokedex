@@ -15,6 +15,10 @@ Esse projeto tem como finalide demonstrar a capacidade de realizar requisições
 
 Inclusão de pesquisa por voz em navegadores com suporte a api SpeechRecognition,esse informação pode ser encontrada no link a seguir: https://caniuse.com/mdn-api_speechrecognitionevent.
 
-#DEMONSTRAÇÃO PESQUISA POR TIPO:
+##DEMONSTRAÇÃO PESQUISA POR TIPO:
 
-![](https://github.com/Vinimd/pokedex/blob/master/assets/imagens/demostracao.gif)
+![gif demonstração pesquisa por tipo](https://github.com/Vinimd/pokedex/blob/master/assets/imagens/demostracao.gif)
+
+##DEMONSTRAÇÃO PESQUISA POR POKÉMONS CLASSICOS:
+
+![gif demonstração pesquisa por pokémons classicos](https://github.com/Vinimd/pokedex/blob/master/assets/imagens/demonstracao-02.gif)
