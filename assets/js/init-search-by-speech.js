@@ -78,7 +78,7 @@ export default function initSearchBySpeech() {
 
     })
 
-    speechButton.addEventListener('touchstart', e =>{
+    speechButton.addEventListener('click', e =>{
         e.preventDefault();
         if (!recognition) return;
         
