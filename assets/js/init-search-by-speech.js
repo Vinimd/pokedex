@@ -79,7 +79,7 @@ export default function initSearchBySpeech() {
     })
 
     speechButton.addEventListener('touchstart', e =>{
-        
+        e.preventDefault();
         if (!recognition) return;
         
         listening ? Stop(): Start();       
