@@ -39,7 +39,7 @@ export default function initSearch() {
             index--;
         } else if (index === 384 && event.target.dataset.button === 'next') {
             index = 1;
-        } else if ((index === 1 || index === 0) && event.target.dataset.button === 'previous') {
+        } else if (index === 1 && event.target.dataset.button === 'previous') {
             index = 384
         }
         const url = `https://pokeapi.co/api/v2/pokemon/${index}`;
