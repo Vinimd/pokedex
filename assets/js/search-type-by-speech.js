@@ -31,7 +31,7 @@ export default function ChangeType(item) {
             //verificação de qual botão foi clicado no indece de escolho do pokemon
             if (index < (json.pokemon.length - 1) && item.includes('próximo')) {
                 index++;
-            } else if (index > 1 && item.includes('anterior')) {
+            } else if (index > 0 && item.includes('anterior')) {
                 index--;
             } else if (index === (json.pokemon.length - 1) && item.includes('próximo')) {
                 index = 0;
