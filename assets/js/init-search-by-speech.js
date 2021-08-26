@@ -3,6 +3,7 @@ import DeletDiv from "./delete-div.js";
 
 export default function initSearchBySpeech() {
     const nextButton = document.querySelector('[data-button="next"]');
+    const speechButton = document.querySelector('[data-search-micro]')
     const display = document.querySelector('.display');
     const input = document.querySelector('#pokemon-name');
     const recognition = CreateSpeech();
@@ -49,11 +50,20 @@ export default function initSearchBySpeech() {
 
     }
 
+    function Start() {
+        DeletDiv();
+        CreateDivRecording();
+        recognition.start(); 
+    }
+    function Stop() {
+        DeleteDivRecording();
+        recognition.stop();
+    }
+
     window.addEventListener('keyup', e => {
         if (!recognition) return;
         if (e.key === ' ' && listening) {
-            DeleteDivRecording()
-            recognition.stop()
+           Stop()
         }
 
     })
@@ -63,10 +73,16 @@ export default function initSearchBySpeech() {
         
         if (!recognition) return;
         if (space && !wasInTheInput && (!listening)) {
-            DeletDiv();
-            CreateDivRecording();
-            recognition.start();
+            Start();
         }
+
+    })
+
+    speechButton.addEventListener('touchstart', e =>{
+        
+        if (!recognition) return;
+        
+        listening ? Stop(): Start();       
 
     })
 }

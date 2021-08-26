@@ -1,0 +1,13 @@
+[data-search-micro]{
+    height: 25px;
+    background-color: rgba(255, 255, 255, 0.74);
+    border: none;
+    border-radius: 4px;
+    display: none;
+}
+
+@media (max-width: 768px) {
+    [data-search-micro]{
+        display: block;
+    }
+}
