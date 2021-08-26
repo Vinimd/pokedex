@@ -1,78 +1,11 @@
-import AbleButton from './able-button.js'
-import CreateDivImg from "./div-img.js";
-import CreateDivName from "./div-name.js";
-import CreateDivType from "./div-type.js";
-import CreateDivHW from "./div-height-weight.js";
+import AbleButton from "./able-button.js";
+import POkemonRequest from "./pokemon-request.js";
 
 export default function InitSearchBytype() {
     const buttonsType = document.querySelectorAll('[data-serach-type]');
     const containerTypeSearch = document.querySelector('.search-type');
     let numberType = 0;
     let index = 0;
-
-    function DeletDiv() {
-        const thereIsDivNameInfo = document.querySelector('.pokemon-name-info');
-        const thereIsDivImg = document.querySelector('.pokemon-image');
-        const thereIsDivError = document.querySelector('.error');
-        const display = document.querySelector('.display');
-
-        if (thereIsDivNameInfo) {
-            display.removeChild(thereIsDivNameInfo);
-        }
-        if (thereIsDivImg) {
-            display.removeChild(thereIsDivImg);
-        }
-        if (thereIsDivError) {
-            display.removeChild(thereIsDivError)
-        }
-
-
-    }
-
-    function POkemonRequest(searchItem) {
-        const display = document.querySelector('.display');
-        const nextButton = document.querySelector('[data-button="next"]');
-        if (searchItem) {
-            //Obtendo as informações do pokemon
-            const url = searchItem;
-            const pokemon = fetch(url);
-
-            // transformando arquivo recebido em json
-            pokemon.then(r => r.json()).then(json => {
-
-                //Ativando a função de delete da div
-                DeletDiv();
-
-                //criando uma div para conter o nome do pokemon
-                const divName = CreateDivName(json);
-                //adicionando a div a pagina
-                display.insertBefore(divName, nextButton);
-
-                //criando div com o para conter o tipo do pokemon
-                const divType = CreateDivType(json);
-                //adicionando a div
-                divName.append(divType);
-
-                //criando div para conter os valores de altura e peso do pokemon
-                const divHW = CreateDivHW(json);
-                divType.append(divHW);
-
-                const divImg = CreateDivImg(json);
-                display.insertBefore(divImg, divName);
-
-            }).catch(() => {
-                //ativando função delete
-                DeletDiv();
-                //criando uma div para conter a mensagem de erro
-                const divError = document.createElement('div');
-                divError.setAttribute('class', 'error');
-                //atribuindo um valor para o valor interno do html da div
-                divError.innerHTML = '<span><strong>Pokemon Não Encontrado</strong></span>'
-                display.insertBefore(divError, nextButton)
-
-            })
-        }
-    }
 
     function TypeRequest(event, type) {
 
@@ -129,8 +62,7 @@ export default function InitSearchBytype() {
     }
 
     function ChangeType(event) {
-            AbleButton(buttonsType[2],buttonsType[3]);
-
+        AbleButton(buttonsType[2],buttonsType[3])
             if (numberType < 18 && event.target.dataset.serachType === 'next-type') {
                 numberType++;
             } else if (numberType > 1 && event.target.dataset.serachType === 'previous-type') {

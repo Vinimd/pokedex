@@ -10,15 +10,19 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
     <title>POKÉMON:POKÉDEX</title>
 </head>
 
 <body>
     <button class="help-button" data-modal='open'>help</button>
     <form>
-        <label for="pokemon-name">type the pokémon name:</label>
+        <label for="pokemon-name">Digte o nome do Pokémon:</label>
         <input type="text" name="pokemon-name" id="pokemon-name">
-        <button data-search>Search</button>
+        <button data-search>Procurar</button>
     </form>
     <div class="display">
         <button data-button='next'></button>
@@ -30,11 +34,11 @@
             <button data-serach-type='previous' disabled></button>
         </div>
     </div>
-    <section class="help" data-modal ="container">
-            <div class='help-img'>
-                <img src="./assets/imagens/help_img.png" data-modal ="img">
-            </div>
-            <button class="close" data-modal='close'>X</button>
+    <section class="help" data-modal="container">
+        <div class='help-img'>
+            <img src="./assets/imagens/img_help.png" data-modal="img">
+        </div>
+        <button class="close" data-modal='close'>X</button>
     </section>
     <script type='module' src="./assets/js/script.js"></script>
 </body>

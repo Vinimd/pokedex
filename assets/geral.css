@@ -61,3 +61,11 @@ body{
     right: 213px;
     cursor: pointer;
 }
+.recording{
+    position: absolute;
+    font-weight: bold;
+    top: 210px;
+    right: 120px;
+    max-width: 236px;
+    max-width: 100; 
+}
