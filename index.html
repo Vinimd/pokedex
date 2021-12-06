@@ -1,52 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:title" content="POKÉDEX"/>
-    <meta name="description" content="Projeto Poké-api">
-    <meta property="og:url" content="https://my-poke-api-project.herokuapp.com/" />
-    <meta property="og:image" content="https://i.pinimg.com/564x/b1/77/26/b17726b28b57427df8895bf1dafaa9b6.jpg" >
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content="POKÉDEX" />
+    <meta name="description" content="Projeto Poké-api" />
+    <meta
+      property="og:url"
+      content="https://my-poke-api-project.herokuapp.com/"
+    />
+    <meta
+      property="og:image"
+      content="https://i.pinimg.com/564x/b1/77/26/b17726b28b57427df8895bf1dafaa9b6.jpg"
+    />
     <meta property="og:type" content="website" />
-    <link rel="icon" href="./assets/imagens/POKEBOLA.png">
-    <link rel="stylesheet" href="./assets/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+    <link rel="icon" href="./assets/imagens/POKEBOLA.png" />
+    <link rel="stylesheet" href="./assets/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap"
+      rel="stylesheet"
+    />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap"
+      rel="stylesheet"
+    />
     <title>POKÉMON:POKÉDEX</title>
-</head>
+  </head>
 
-<body>
-    <button class="help-button" data-modal='open'>help</button>
+  <body>
+    <button class="help-button" data-modal="open">help</button>
     <form>
-        <label for="pokemon-name">Digte o nome do Pokémon:</label>
-        <input type="text" name="pokemon-name" id="pokemon-name">
-        <button data-search>Procurar</button>
-        <button data-search-micro>&#127897;</button>
+      <label for="pokemon-name">Digte o nome do Pokémon:</label>
+      <input type="text" name="pokemon-name" id="pokemon-name" />
+      <button data-search>Procurar</button>
+      <button data-search-micro>&#127897;</button>
     </form>
     <div class="display">
-        <button data-button='next'></button>
-        <button data-button='previous'></button>
-        <div class="search-type">
-            <button data-serach-type='next-type'></button>
-            <button data-serach-type='previous-type'></button>
-            <button data-serach-type='next' disabled></button>
-            <button data-serach-type='previous' disabled></button>
-        </div>
+      <button data-button="next"></button>
+      <button data-button="previous"></button>
+      <div class="search-type">
+        <button data-serach-type="next-type"></button>
+        <button data-serach-type="previous-type"></button>
+        <button data-serach-type="next" disabled></button>
+        <button data-serach-type="previous" disabled></button>
+      </div>
     </div>
     <section class="help" data-modal="container">
-        <div class='help-img'>
-            <img src="./assets/imagens/img_help.png" data-modal="img">
-        </div>
-        <button class="close" data-modal='close'>X</button>
+      <div class="help-img">
+        <img src="./assets/imagens/img_help.png" data-modal="img" />
+      </div>
+      <button class="close" data-modal="close">X</button>
     </section>
-    <script type='module' src="./assets/js/script.js"></script>
-</body>
-
+    <script type="module" src="./assets/main.js/main.js"></script>
+  </body>
 </html>

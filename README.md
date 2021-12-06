@@ -22,5 +22,3 @@ Inclusão de pesquisa por voz em navegadores com suporte a API SpeechRecognition
 ##DEMONSTRAÇÃO PESQUISA POR POKÉMONS CLASSICOS:
 
 ![gif demonstração pesquisa por pokémons classicos](https://github.com/Vinimd/pokedex/blob/master/assets/imagens/demonstracao-02.gif)
-
-link Heroku: https://my-poke-api-project.herokuapp.com/
